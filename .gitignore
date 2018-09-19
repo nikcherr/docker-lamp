@@ -7,3 +7,4 @@ logs/mysql/*
 data/mysql/*
 !data/mysql/.gitkeep
 volume/wordpress/*
+!volume/wordpress/.gitkeep
