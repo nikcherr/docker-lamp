@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  webserver:
+    build: 
+      context: ./conf/webserver
+    container_name: 'wp_webserver'
+    ports:
+      - "80:80"
+      - "443:443"
+    links: 
+      - mysql
+    volumes: 
+      - ./volume:/var/www
+      - ./conf/vhosts:/etc/apache2/sites-enabled
+      - ./logs/apache2:/var/log/apache2
+  mysql:
+    build: 
+      context: ./conf/mysql
+    container_name: 'wp_mysql'
+    ports:
+      - "3306:3306"
+    volumes: 
+      - ./data/mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpressuser
+      MYSQL_PASSWORD: password
