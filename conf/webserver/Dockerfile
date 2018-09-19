@@ -44,3 +44,22 @@ RUN docker-php-ext-install -j$(nproc) gd
 
 # Enable apache modules
 RUN a2enmod rewrite headers
+
+# Install wordpress
+RUN mkdir /var/www/wordpress
+RUN cd /tmp \
+    curl -O https://wordpress.org/latest.tar.gz \
+    tar xzvf latest.tar.gz \
+    touch /tmp/wordpress/.htaccess \
+    #cp /tmp/wordpress/wp-config-sample.php /tmp/wordpress/wp-config.php \
+    mkdir /tmp/wordpress/wp-content/upgrade \
+    cp -a /tmp/wordpress/. /var/www/wordpress 
+
+COPY ./wp-config.php /var/www/wordpress
+
+#RUN chown -R www-data:www-data /var/www/wordpress
+RUN find /var/www/wordpress/ -type d -exec chmod 750 {} \;
+RUN find /var/www/wordpress/ -type f -exec chmod 640 {} \;
+
+
+
