@@ -6,5 +6,4 @@ logs/mysql/*
 !logs/mysql/.gitkeep
 data/mysql/*
 !data/mysql/.gitkeep
-node_modules/
 vendor/

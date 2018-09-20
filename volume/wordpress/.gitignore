@@ -1,4 +1,5 @@
-wp/
 local-config.php
-content
+content/*
 !content/.gitkeep
+wp/*
+!wp/.gitkeep
