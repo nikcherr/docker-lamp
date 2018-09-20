@@ -3,3 +3,4 @@ content/*
 !content/.gitkeep
 wp/*
 !wp/.gitkeep
+wp-config-local.php
