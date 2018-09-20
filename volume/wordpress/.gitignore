@@ -1,2 +1,4 @@
 wp/
 local-config.php
+content
+!content/.gitkeep
