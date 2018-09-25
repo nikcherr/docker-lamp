@@ -1,5 +1,6 @@
 local-config.php
 content/plugins
+content/languages
 wp/*
 !wp/.gitkeep
 wp-config-local.php
