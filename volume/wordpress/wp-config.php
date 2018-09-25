@@ -59,7 +59,6 @@ define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
 }
 /**#@-*/
-
 /**
  * WordPress Database Table prefix.
  *
@@ -90,3 +89,8 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+// ========================
+// Add Custom Themes Directory
+// ========================
+register_theme_directory( dirname( __FILE__ ) . '/content/themes' );
