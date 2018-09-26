@@ -177,7 +177,7 @@ cite span { color: #fff; }
 	border: none;
 }
 
-#templatemo_menu ul li a:hover, #templatemo_menu ul li .current {
+#templatemo_menu ul li a:hover, #templatemo_menu ul li.current-menu-item a{
 	color: #fff;
 	background: url(assets/images/templatemo_menu_hover.jpg) center bottom no-repeat;
 }

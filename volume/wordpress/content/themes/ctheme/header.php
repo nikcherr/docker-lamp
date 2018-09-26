@@ -25,14 +25,13 @@
     </div> <!-- end of header -->
     
     <div id="templatemo_menu">
-    
-        <ul>
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>    	
-    
+        <?php wp_nav_menu([
+        'theme_location'  => 'primary-menu',
+        'container'       => null, 
+	'container_class' => null, 
+	'container_id'    => 'templatemo_menu',
+        'items_wrap'      => '<ul>%3$s</ul>',
+        ]); ?>
     </div> <!-- end of templatemo_menu -->
     
 </div> <!-- end of header wrapper -->
