@@ -71,9 +71,9 @@ cite span { color: #fff; }
 	text-decoration: underline;
 }
 
-.templatemo_list { margin: 0; padding: 0; list-style: none; }
-.templatemo_list li { margin: 0; padding: 0; }
-.templatemo_list li a { display: block; padding: 3px 0 3px 0; text-decoration: none; border-bottom: 1px solid #d6d6d6; }
+.templatemo_list ul { margin: 0; padding: 0; list-style: none; }
+.templatemo_list ul li { margin: 0; padding: 0; }
+.templatemo_list ul li a { display: block; padding: 3px 0 3px 0; text-decoration: none; border-bottom: 1px solid #d6d6d6; }
 
 /* header */
 
