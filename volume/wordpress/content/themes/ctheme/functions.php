@@ -10,6 +10,7 @@ function ctheme_addstyle(){
 function ctheme_register_nav_menu() {
     register_nav_menu( 'primary-menu', 'Primary Menu' );
     add_theme_support('post-thumbnails');
+    add_theme_support('title-tag');
 }
 
 function ctheme_register_my_widgets() {
@@ -23,3 +24,11 @@ function ctheme_register_my_widgets() {
 	'after_title'   => "</h4>\n",
     ]); 
 }
+/*Длина по которому режется текст*/
+add_filter( 'excerpt_length', function(){
+	return 1;
+} );
+
+add_filter('excerpt_more', function($more) {
+	return '...';
+});

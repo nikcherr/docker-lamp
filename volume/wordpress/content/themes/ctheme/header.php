@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo('charset')?>" />
-    <?php add_theme_support('title_tag'); ?>
     <meta name="keywords" content="free css templates, tripod, blog, theme" />
     <meta name="description" content="Tripod - free CSS template provided by templatemo.com" />
     <?php wp_head();?>

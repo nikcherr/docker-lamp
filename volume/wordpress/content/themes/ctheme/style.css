@@ -241,7 +241,7 @@ cite span { color: #fff; }
 
 .post_section .category {
 	float: left;
-	width: 300px;
+	width: auto;
 }
 
 .post_section .comment {
