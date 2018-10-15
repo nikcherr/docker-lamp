@@ -14,9 +14,7 @@
                 </h2>
                 <strong>Date:</strong> <?php the_date(); ?> | <strong>Author:</strong> <?php the_author(); ?>
                 <a href="#"><img src="<?php echo the_post_thumbnail_url();?>" alt="image 1" /></a>
-                <?php if(is_category() || is_home()) {
-                            the_excerpt(); }
-                      else the_content(); ?>
+                <?php the_content(); ?>
                 <div class="cleaner"></div>
                 <div class="category">Tags: <a href="#">Freebies</a>, <a href="#">Templates</a></div> 
                 <?php if(is_category() || is_home()):?>

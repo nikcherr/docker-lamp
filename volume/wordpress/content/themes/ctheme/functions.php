@@ -24,11 +24,23 @@ function ctheme_register_my_widgets() {
 	'after_title'   => "</h4>\n",
     ]); 
 }
-/*Длина по которому режется текст*/
+add_filter('the_content', function($content){
+    $str = '';
+    if(is_home() || is_category()){
+        $content_arr = explode(' ', $content);
+        for($i = 0; $i < 2; $i++){
+            $str .= $content_arr[$i] . ' ';
+        }
+        return trim($str) . '...';
+    }
+    return $content;
+});
+/*
+Длина по которому режется текст
 add_filter( 'excerpt_length', function(){
 	return 1;
 } );
-
 add_filter('excerpt_more', function($more) {
 	return '...';
 });
+*/
