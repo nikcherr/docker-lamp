@@ -12,7 +12,7 @@
                 <h2><a href="<?php the_permalink();?>"> 
                     <?php the_title(); ?> </a>
                 </h2>
-                <strong>Date:</strong> <?php the_date(); ?> | <strong>Author:</strong> <?php the_author(); ?>
+                <strong>Дата:</strong> <?php the_date(); ?> | <strong>Автор:</strong> <?php the_author(); ?>
                 <a href="#"><img src="<?php echo the_post_thumbnail_url();?>" alt="image 1" /></a>
                 <?php the_content(); ?>
                 <div class="cleaner"></div>

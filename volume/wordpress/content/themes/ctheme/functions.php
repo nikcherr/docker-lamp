@@ -8,9 +8,10 @@ function ctheme_addstyle(){
 }
 
 function ctheme_register_nav_menu() {
-    register_nav_menu( 'primary-menu', 'Primary Menu' );
+    register_nav_menu('primary-menu', 'Primary Menu');
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
+    add_theme_support('post-formats', array( 'aside', 'quote' ));
 }
 
 function ctheme_register_my_widgets() {
@@ -24,6 +25,13 @@ function ctheme_register_my_widgets() {
 	'after_title'   => "</h4>\n",
     ]); 
 }
+add_filter('pre_get_document_title', function($t){
+        if(is_single()){
+            $t = CFS()->get('tag_title');
+        }
+        return $t;
+});
+
 add_filter('the_content', function($content){
     $str = '';
     if(is_home() || is_category()){
