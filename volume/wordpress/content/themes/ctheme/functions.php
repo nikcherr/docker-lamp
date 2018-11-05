@@ -1,5 +1,5 @@
 <?php
-add_filter('show_admin_bar', '__return_false');   
+add_filter('show_admin_bar', '__return_false');
 add_action('wp_enqueue_scripts', 'ctheme_addstyle');
 add_action('after_setup_theme', 'ctheme_register_nav_menu');
 add_action('widgets_init', 'ctheme_register_my_widgets' );
@@ -30,6 +30,12 @@ add_filter('pre_get_document_title', function($t){
             $t = CFS()->get('tag_title');
         }
         return $t;
+});
+
+add_filter('widget_text', 'do_shortcode');
+add_shortcode('map', function(){
+    $ya_map = '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A799dcb2b5d68c58d9e17332865fe1ce5633d3fa9893e79d71c1b72f85227a7b1&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>';
+    return $ya_map;  
 });
 
 add_filter('the_content', function($content){
